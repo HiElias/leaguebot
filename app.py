@@ -28,7 +28,6 @@ def send_welcome(message):
   ,parse_mode='html',reply_markup=markup)
 
 
-
 @bot.message_handler(func=lambda message: re.search(url_reg, message.text))
 def insta_url(message): # ONLY INSTA URLS
 	date = message.date
@@ -63,7 +62,7 @@ def menu(message):
 	if message.chat.type == 'private':
 		if message.text == "Tournament":
 			bot.reply_to(message, "There is no tournament")
-			#bot.send_message(message.chat.id, row)
+			
 		
 		elif message.text == "Vote":
 			bot.reply_to(message, "There is no vote")
